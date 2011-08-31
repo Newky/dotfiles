@@ -1,4 +1,7 @@
 set autoindent
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 set incsearch
 set nohlsearch
 set number
