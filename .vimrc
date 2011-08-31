@@ -1,5 +1,6 @@
 set autoindent
 set backup
+" For this to work you need to have created these directories first
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 set incsearch
