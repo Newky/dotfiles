@@ -53,4 +53,4 @@ wget -O /tmp/plugin.zip $NERDTREEURL
 unzip /tmp/plugin.zip -d /tmp
 mv /tmp/plugin/NERD_tree.vim $NERDTREEFILE
 
-
+./update.sh
