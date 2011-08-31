@@ -46,3 +46,11 @@ else
 	echo "Please Install CTAGS for this to work"
 fi
 
+NERDTREEURL="http://www.vim.org/scripts/download_script.php?src_id=11834"
+NERDTREEFILE=$PLUGIN_DIR"/NERD_tree.vim"
+
+wget -O /tmp/plugin.zip $NERDTREEURL
+unzip /tmp/plugin.zip -d /tmp
+mv /tmp/plugin/NERD_tree.vim $NERDTREEFILE
+
+

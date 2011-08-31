@@ -15,6 +15,8 @@ vnoremap <C-r> "hy:s/<C-r>h//g<left><left>
 nnoremap <silent> <C-t> :tabnew<CR>
 nnoremap <silent> <F3> :tabprevious<CR>
 nnoremap <silent> <F4> :tabnext<CR>
+nnoremap <silent> <F7> :TlistToggle <CR>
+nnoremap <silent> <F8> :NERDTreeToggle <CR>
 inoremap jj <Esc>
 nnoremap <space> za
 vnoremap <space> zf
