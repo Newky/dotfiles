@@ -52,5 +52,5 @@ NERDTREEFILE=$PLUGIN_DIR"/NERD_tree.vim"
 wget -O /tmp/plugin.zip $NERDTREEURL
 unzip /tmp/plugin.zip -d /tmp
 mv /tmp/plugin/NERD_tree.vim $NERDTREEFILE
-
+#This is to run pauls update script
 ./update.sh
