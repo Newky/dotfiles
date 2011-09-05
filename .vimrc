@@ -1,4 +1,3 @@
-set autoindent
 set backup
 " For this to work you need to have created these directories first
 set backupdir=~/.vim/backup
@@ -17,6 +16,8 @@ nnoremap <silent> <F3> :tabprevious<CR>
 nnoremap <silent> <F4> :tabnext<CR>
 nnoremap <silent> <F7> :TlistToggle <CR>
 nnoremap <silent> <F8> :NERDTreeToggle <CR>
+" New Line back into normal mode
+nnoremap zo o<Esc>
 inoremap jj <Esc>
 nnoremap <space> za
 vnoremap <space> zf
