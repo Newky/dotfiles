@@ -96,6 +96,15 @@ else
 	export http_proxy=''
 fi
 
+if hash nmap > /dev/null; then
+	alias scannet='nmap -sP 192.168.1.0/24'
+fi
+
+if hash apt-get > /dev/null; then
+	alias update='sudo apt-get update'
+	alias upgrade='sudo apt-get upgrade'
+fi
+
 #git aliases
 alias gco="git checkout"
 alias gcm="git commit"
