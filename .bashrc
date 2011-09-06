@@ -1,7 +1,6 @@
 # System-wide .bashrc file for interactive bash(1) shells.
 
 #Colors
-
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
@@ -92,7 +91,6 @@ incollege="yes"
 #incollege="no"
 
 if [ "$incollege" = "yes" ]; then
-	echo "here";
 	export http_proxy='http://<username>:<password>@proxyA.tcd.ie:8081'
 else
 	export http_proxy=''
