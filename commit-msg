@@ -1,0 +1,25 @@
+#!/usr/bin/python
+# Git hook which adds the current branch name to the start of each commit.
+
+import sys 
+from subprocess import Popen, PIPE
+
+if len(sys.argv) < 2:
+        sys.exit(1)
+
+commit_filename = sys.argv[1]
+# read contents of commit message
+f = open(commit_filename, "r")
+content = f.read()
+f.close()
+# get branch name
+command = "git symbolic-ref -q HEAD"
+p = Popen(command.split(), stdout=PIPE)
+branch_name = p.communicate()[0]
+branch_name = branch_name.replace('refs/heads/', '') 
+branch_name = branch_name.strip()
+branch_name = "[%s] " % branch_name
+# read contents of commit message
+f = open(commit_filename, "w")
+f.write(branch_name + content)
+f.close()
