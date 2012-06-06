@@ -105,6 +105,11 @@ if hash apt-get > /dev/null; then
 	alias upgrade='sudo apt-get upgrade'
 fi
 
+if [ -f ~/.bash_completion.d/git-completion.bash ]; then
+        . ~/.bash_completion.d/git-completion.bash
+        PS1='[\u@\h \W$(__git_ps1 " (%s)")]$ '
+fi
+
 #git aliases
 alias gco="git checkout"
 alias gcm="git commit"
