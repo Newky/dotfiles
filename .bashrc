@@ -87,8 +87,8 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found ]; then
 fi
 
 #Comment  line if at home ;)
-incollege="yes"
-#incollege="no"
+#incollege="yes"
+incollege="no"
 
 if [ "$incollege" = "yes" ]; then
 	export http_proxy='http://<username>:<password>@proxyA.tcd.ie:8081'
@@ -111,3 +111,8 @@ alias gcm="git commit"
 alias gst="git status"
 alias gadd="git add"
 alias gpsh="git push origin"
+
+#vim opens files in tabs by default
+alias vim="vim -p"
+
+alias ..="cd .."
