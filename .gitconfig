@@ -1,0 +1,25 @@
+[user]
+	email = rdelaney@demonwaremail.net
+	name = rdelaney
+[diff]
+	external = git_diff_wrapper.sh
+[pager]
+	diff = 
+[push]
+	default = tracking
+[alias]
+	unstage = reset HEAD
+	st = status
+	co = checkout
+	br = branch
+	cov = commit --no-verify
+	ll = log --oneline --color
+	ndiff = diff --no-ext-diff
+	nndiff = diff --no-ext-diff --name-only 
+	cdiff = diff --cached
+[branch]
+	autosetuprebase = always
+[mergetool "vimdiff3"]
+	cmd = vim -f -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+[color]
+	ui = auto
