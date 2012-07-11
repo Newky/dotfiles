@@ -1,4 +1,28 @@
 # System-wide .bashrc file for interactive bash(1) shells.
+#functions
+#simplistic tasks / todo functions.
+#to add do: tplus "string of todo"
+#to list do: tasks
+#to remove item x: tminus x
+tplus () {
+	if [ ! -f ~/save ];
+	then
+		echo "0 $1" >> ~/.save
+	else
+		cat ~/.save | wc -l | xargs -I lno echo "lno. $1" >> ~/.save
+	fi
+	}
+
+tminus () {
+	cat ~/.save | grep -v "^$1. " > ~/.save.bk
+	cp ~/.save.bk ~/.save
+	}
+
+tasks () {
+	cat ~/.save
+	}
+
+
 
 #Colors
 txtblk='\e[0;30m' # Black - Regular
@@ -111,6 +135,7 @@ if [ -f ~/.bash_completion.d/git-completion.bash ]; then
 fi
 
 #git aliases
+alias vim='vim -p'
 alias gco="git checkout"
 alias gcm="git commit"
 alias gst="git status"
