@@ -17,6 +17,7 @@
 	ndiff = diff --no-ext-diff
 	nndiff = diff --no-ext-diff --name-only 
 	cdiff = diff --cached
+	rpull = pull --rebase
 [branch]
 	autosetuprebase = always
 [mergetool "vimdiff3"]
