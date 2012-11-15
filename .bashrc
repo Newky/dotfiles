@@ -23,6 +23,14 @@ tasks () {
 	}
 
 
+function note()
+{
+	if [ ! -d $HOME/Notes/ ]; then
+		mkdir $HOME/Notes/
+	fi;
+
+	vim -p $HOME/Notes/$1.note
+}
 
 #Colors
 txtblk='\e[0;30m' # Black - Regular
