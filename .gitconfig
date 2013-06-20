@@ -18,6 +18,9 @@
 	nndiff = diff --no-ext-diff --name-only 
 	cdiff = diff --cached
 	rpull = pull --rebase
+    pom = push origin master
+    cm = checkout master
+    adu = add -u
 [branch]
 	autosetuprebase = always
 [mergetool "vimdiff3"]
