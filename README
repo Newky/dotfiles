@@ -1,5 +1,18 @@
 # Dot File Repo
 
-A git repo which stores my various dot files, for configuration of various applications and shells.
+My dotfiles.
 
-For now I just have my vimrc but soon to be added are .bashrc
+The aim is to have a way to run all this very quickly on any server.
+Right now I have two scripts here which work for the following rc files:
+-> gitconfig
+-> bashrc
+-> screenrc
+
+The bashrc also has some niceties where it loads from the dotfiles/bash directory all the rc files. This makes all this much more readable.
+
+There are two setup scripts:
+
+- copy_rcs.sh
+    - This copys all the rc files into place in $HOME. It also saves backups of the current in <file>_bk
+- restore_rcs.sh
+    - This restores the <file>_bk saved in the previous script.
