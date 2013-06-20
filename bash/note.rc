@@ -1,0 +1,9 @@
+# note create
+function note()
+{
+	if [ ! -d $HOME/Notes/ ]; then
+		mkdir $HOME/Notes/
+	fi;
+
+	vim -p $HOME/Notes/$1.note
+}

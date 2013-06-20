@@ -1,0 +1,14 @@
+#git aliases
+alias gco="git checkout"
+alias gcm="git commit"
+alias gst="git status"
+alias gadd="git add"
+alias gpsh="git push origin"
+
+#vim opens files in tabs by default
+alias vim="vim -p"
+alias ..="cd .."
+alias lstr='ls -tr'
+
+# ubuntu 12.04 specific
+alias audiokill="pulseaudio -k && sudo alsa force-reload"

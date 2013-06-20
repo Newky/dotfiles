@@ -1,0 +1,2 @@
+export ONE_TRUE_EDITOR=vim
+export EDITOR=$ONE_TRUE_EDITOR
