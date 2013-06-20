@@ -1,1 +1,1 @@
-PS1="\[$txtgrn\]\u\[$txtred\] \w\[$txtrst\]\$ "
+PS1="\[$txtgrn\]\u\[$txtpur\][\h]\[$txtred\] \w\[$txtrst\]\$ "
