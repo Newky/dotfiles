@@ -7,3 +7,24 @@ function note()
 
 	vim -p $HOME/Notes/$1.note
 }
+
+function tmpnote()
+{
+    vim -p /tmp/$1.note
+}
+
+function note-rm()
+{
+	if [ -d $HOME/Notes/ ]; then
+		rm $HOME/Notes/$1.note
+    fi;
+}
+
+function note-list()
+{
+    if [ -d $HOME/Notes/ ]; then
+		ls -tr $HOME/Notes/ | sed "s/\.note//"
+    fi;
+}
+
+

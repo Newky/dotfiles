@@ -1,8 +1,8 @@
-if hash nmap > /dev/null; then
+if hash nmap 2> /dev/null; then
 	alias scannet='nmap -sP 192.168.1.0/24'
 fi
 
-if hash apt-get > /dev/null; then
+if hash apt-get 2> /dev/null; then
 	alias update='sudo apt-get update'
 	alias upgrade='sudo apt-get upgrade'
 fi

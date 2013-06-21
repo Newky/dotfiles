@@ -54,6 +54,12 @@ if [ -f ~/.bash_completion.d/git-completion.bash ]; then
         PS1='[\u@\h \W$(__git_ps1 " (%s)")]$ '
 fi
 
+# ssh bash completion
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
 function load_rcs()
 {
 	if [ -d $HOME/Notes/ ]; then
