@@ -12,15 +12,19 @@
 	st = status
 	co = checkout
 	br = branch
+	branchrename = branch -m
+	currbranch = rev-parse --abbrev-ref HEAD
 	cov = commit --no-verify
 	ll = log --oneline --color
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	ndiff = diff --no-ext-diff
 	nndiff = diff --no-ext-diff --name-only 
 	cdiff = diff --cached
 	rpull = pull --rebase
-    pom = push origin master
-    cm = checkout master
-    adu = add -u
+	pom = push origin master
+	cm = checkout master
+	adu = add -u
+	lastmessage = log -1 --pretty=%B 
 [branch]
 	autosetuprebase = always
 [mergetool "vimdiff3"]

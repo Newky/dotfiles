@@ -48,12 +48,6 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found ]; then
 		fi
 	}
 fi
-
-if [ -f ~/.bash_completion.d/git-completion.bash ]; then
-        . ~/.bash_completion.d/git-completion.bash
-        PS1='[\u@\h \W$(__git_ps1 " (%s)")]$ '
-fi
-
 # ssh bash completion
 
 if [ -f /etc/bash_completion ]; then
@@ -62,7 +56,7 @@ fi
 
 function load_rcs()
 {
-	if [ -d $HOME/Notes/ ]; then
+    if [ -d $HOME/dotfiles/bash/ ]; then
         for rcfile in `ls $HOME/dotfiles/bash/*.rc`; do
             source "$rcfile"
         done;

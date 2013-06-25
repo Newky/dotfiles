@@ -26,5 +26,3 @@ function note-list()
 		ls -tr $HOME/Notes/ | sed "s/\.note//"
     fi;
 }
-
-

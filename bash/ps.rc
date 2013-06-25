@@ -1,1 +1,5 @@
 PS1="\[$txtgrn\]\u\[$txtpur\][\h]\[$txtred\] \w\[$txtrst\]\$ "
+if [ -f ~/.bash_completion.d/git-completion.bash ]; then
+        . ~/.bash_completion.d/git-completion.bash
+        PS1="\[$txtgrn\]\u\[$txtpur\][\h]\[$txtred\] \[$bldgrn\]\W\$(__git_ps1)\[$txtrst\]$ "
+fi

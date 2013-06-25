@@ -6,3 +6,6 @@ if hash apt-get 2> /dev/null; then
 	alias update='sudo apt-get update'
 	alias upgrade='sudo apt-get upgrade'
 fi
+
+alias inslocal="sudo yum localinstall --nogpgcheck"
+alias pd="pushd ./"

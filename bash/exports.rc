@@ -1,2 +1,4 @@
 export ONE_TRUE_EDITOR=vim
 export EDITOR=$ONE_TRUE_EDITOR
+export SITEPACK=/usr/lib/python2.5/site-packages
+export HISTSIZE=10000

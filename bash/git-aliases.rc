@@ -1,4 +1,5 @@
 #git aliases
+alias g='git'
 alias gco="git checkout"
 alias gcm="git commit"
 alias gst="git status"
