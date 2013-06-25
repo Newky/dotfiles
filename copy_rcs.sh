@@ -1,14 +1,25 @@
 #!/bin/bash
-cp ~/.gitconfig{,_bk}
-cp .gitconfig ~/.gitconfig
-echo "Copied gitconfig to ~/.gitconfig. Old gitconfig copied to ~/.gitconfig_bk"
-mkdir -p ~/bin
-cp git/git_diff_wrapper.sh ~/bin/
-echo "Copied git_diff_wrapper.sh into the ~/bin folder"
-cp ~/.bashrc{,_bk}
-cp .bashrc ~/.bashrc
-echo "Copied bashrc to ~/.bashrc. Old bashrc copied to ~/.bashrc_bk"
-cp ~/.screenrc{,_bk}
-cp .screenrc ~/.screenrc
-echo "Copied screenrc to ~/.screenrc. Old screenrc copied to ~/.screenrc_bk"
+if [ $# -eq 0 ]; then
+    CONFIG="all"
+else
+    CONFIG=$1
+fi
+if [ $CONFIG == 'all' -o $CONFIG == 'git' ]; then
+    cp ~/.gitconfig{,_bk}
+    cp .gitconfig ~/.gitconfig
+    echo "Copied gitconfig to ~/.gitconfig. Old gitconfig copied to ~/.gitconfig_bk"
+    mkdir -p ~/bin
+    cp git/git_diff_wrapper.sh ~/bin/
+    echo "Copied git_diff_wrapper.sh into the ~/bin folder"
+fi
+if [ $CONFIG == 'all' -o $CONFIG == 'bash' ]; then
+    cp ~/.bashrc{,_bk}
+    cp .bashrc ~/.bashrc
+    echo "Copied bashrc to ~/.bashrc. Old bashrc copied to ~/.bashrc_bk"
+fi
+if [ $CONFIG == 'all' -o $CONFIG == 'screen' ]; then
+    cp ~/.screenrc{,_bk}
+    cp .screenrc ~/.screenrc
+    echo "Copied screenrc to ~/.screenrc. Old screenrc copied to ~/.screenrc_bk"
+fi
 exec bash -login
