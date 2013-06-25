@@ -1,0 +1,6 @@
+alias djmanage="python2.5 ~/webzone/src/webzone/core/manage.py"
+alias pygrep="grep --include=*.py --color=always -rn"
+
+function get_all_settings {
+    pygrep -r "\(settings\.\w*\)" $1 | sed -n "s/.*\(settings.\w*\).*/\1/p" | sort -u
+}

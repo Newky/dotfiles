@@ -1,0 +1,3 @@
+function vmod {
+    vim -p `git nndiff $1`
+}
