@@ -1,5 +1,8 @@
 PS1="\[$txtgrn\]\u\[$txtpur\][\h]\[$txtred\] \w\[$txtrst\]\$ "
+
 if [ -f ~/.bash_completion.d/git-completion.bash ]; then
         . ~/.bash_completion.d/git-completion.bash
+fi
+if type __git_ps1 | grep -q "function" 2>/dev/null; then
         PS1="\[$txtgrn\]\u\[$txtpur\][\h]\[$txtred\] \[$bldgrn\]\W\$(__git_ps1)\[$txtrst\]$ "
 fi
