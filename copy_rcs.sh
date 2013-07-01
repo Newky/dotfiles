@@ -22,4 +22,10 @@ if [ $CONFIG == 'all' -o $CONFIG == 'screen' ]; then
     cp .screenrc ~/.screenrc
     echo "Copied screenrc to ~/.screenrc. Old screenrc copied to ~/.screenrc_bk"
 fi
+if [ $CONFIG == 'all' -o $CONFIG == 'vim' ]; then
+    sh ~/dotfiles/bin/installvimconfig.sh
+    cp ~/.vimrc{,_bk}
+    cp .vimrc ~/.vimrc
+    echo "Copied vimrc to ~/.vimrc. Old vimrc copied to ~/.vimrc_bk"
+fi
 exec bash -login

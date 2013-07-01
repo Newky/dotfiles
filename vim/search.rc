@@ -1,0 +1,2 @@
+set incsearch
+set nohlsearch
