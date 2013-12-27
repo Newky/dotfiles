@@ -28,4 +28,10 @@ if [ $CONFIG == 'all' -o $CONFIG == 'vim' ]; then
     cp .vimrc ~/.vimrc
     echo "Copied vimrc to ~/.vimrc. Old vimrc copied to ~/.vimrc_bk"
 fi
+if [ $CONFIG == 'all' -o $CONFIG == 'tmux' ]; then
+    cp ~/.tmux.conf{,_bk}
+    cp .tmux.conf ~/.tmux.conf
+    echo "Copied tmux configuration to ~/.tmux.conf."
+    echo "Old tmux conf (if any) was copied to ~/.tmux.conf_bk"
+fi
 exec bash -login

@@ -7,6 +7,7 @@ Right now I have two scripts here which work for the following rc files:
 -> gitconfig
 -> bashrc
 -> screenrc
+-> tmux.conf
 
 The bashrc also has some niceties where it loads from the dotfiles/bash directory all the rc files. This makes all this much more readable.
 
@@ -16,3 +17,7 @@ There are two setup scripts:
     - This copys all the rc files into place in $HOME. It also saves backups of the current in <file>_bk
 - restore_rcs.sh
     - This restores the <file>_bk saved in the previous script.
+
+Both scripts take one of the following arguments: "tmux", "vim", "git", "screen"
+
+If no argument supplied all will be copied.
