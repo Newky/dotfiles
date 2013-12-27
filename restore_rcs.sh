@@ -22,3 +22,12 @@ if [ $CONFIG == 'all' -o $CONFIG == 'tmux' ]; then
     cp ~/.tmux.conf{_bk,}
     echo "restored tmux conf"
 fi
+if [ $CONFIG == 'all' -o $CONFIG == 'quicktile' ]; then
+    if [ -d ~/.config ]; then
+        cp ~/.config/quicktile.cfg{_bk,}
+        echo "restored quicktile conf"
+    else
+        echo "Config directory does not exist."
+        echo "please make sure quicktile is installed"
+    fi
+fi

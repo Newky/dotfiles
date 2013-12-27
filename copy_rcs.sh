@@ -34,4 +34,13 @@ if [ $CONFIG == 'all' -o $CONFIG == 'tmux' ]; then
     echo "Copied tmux configuration to ~/.tmux.conf."
     echo "Old tmux conf (if any) was copied to ~/.tmux.conf_bk"
 fi
+if [ $CONFIG == 'all' -o $CONFIG == 'quicktile' ]; then
+    if [ -d ~/.config ]; then
+        cp ~/.config/quicktile.cfg{,_bk}
+        cp quicktile.cfg ~/.config/
+    else
+        echo "Config directory does not exist."
+        echo "please make sure quicktile is installed"
+    fi
+fi
 exec bash -login
