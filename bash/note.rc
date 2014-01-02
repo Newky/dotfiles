@@ -10,7 +10,11 @@ function note()
 
 function tmpnote()
 {
-    vim -p /tmp/$1.note
+    if [ $1 ]; then
+        vim -p /tmp/$1.note
+    else
+        vim -p /tmp/`date "+%s"`.note
+    fi
 }
 
 function note-rm()

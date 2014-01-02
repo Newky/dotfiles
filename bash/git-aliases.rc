@@ -3,7 +3,7 @@ alias g='git'
 alias gco="git checkout"
 alias gcm="git commit"
 alias gst="git status"
-alias gstu="git status --untracked=no"
+alias gstu="git status -uno"
 alias gadd="git add"
 alias gpsh="git push origin"
 
