@@ -16,6 +16,7 @@ if [ $CONFIG == 'all' -o $CONFIG == 'bash' ]; then
     cp ~/.bashrc{,_bk}
     cp .bashrc ~/.bashrc
     echo "Copied bashrc to ~/.bashrc. Old bashrc copied to ~/.bashrc_bk"
+    exec bash -login
 fi
 if [ $CONFIG == 'all' -o $CONFIG == 'screen' ]; then
     cp ~/.screenrc{,_bk}
@@ -43,4 +44,3 @@ if [ $CONFIG == 'all' -o $CONFIG == 'quicktile' ]; then
         echo "please make sure quicktile is installed"
     fi
 fi
-exec bash -login
