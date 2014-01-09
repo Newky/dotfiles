@@ -54,6 +54,11 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# disable ctrl-s output stopping (ruins tmux particuarlly)
+
+stty -ixon
+
+
 function load_rcs()
 {
     if [ -d $HOME/dotfiles/bash/ ]; then
