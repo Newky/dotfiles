@@ -1,0 +1,3 @@
+function linenumdisp {
+    sed -n "$1p" $2
+}
