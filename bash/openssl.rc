@@ -1,0 +1,49 @@
+function check_openssl_exists {
+    command -v openssl >/dev/null 2>&1 || { echo >&2 "I require openssl but it's not installed.  Aborting."; exit 1; } 
+}
+
+
+function base64encode {
+    # encode a string using base64 encoding
+    # reads stdin and writes stdout
+    openssl enc -base64
+
+}
+
+function base64decode {
+    # decode a string using base64 encoding
+    # reads stdin and writes stdout
+    openssl enc -base64 -d
+}
+
+
+function encryptf {
+    # encrypt a file.
+    # this base64 encodes it.
+    # if no outfile is passed in, it assumes stdout
+    # if no infile is passed in, it assumes stdin
+    check_openssl_exists
+    if [ $2 ]; then 
+        openssl enc -aes-256-cbc -a -salt -in $1 -out $outfile
+    elif [ $1 ]; then
+        openssl enc -aes-256-cbc -a -salt -in $1
+    else
+        openssl enc -aes-256-cbc -a -salt
+    fi
+}
+
+
+function decryptf {
+    # decrypt a file
+    # a direct compliment of encryptf
+    # assumes base64 encoding
+    # no argument reads from stdin
+    check_openssl_exists
+    if [ $2 ]; then 
+        openssl enc -d -aes-256-cbc -a -in $1 -out $2
+    elif [ $1 ]; then
+        openssl enc -d -aes-256-cbc -a -in $1
+    else
+        openssl enc -d -aes-256-cbc -a
+    fi
+}
