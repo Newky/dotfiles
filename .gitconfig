@@ -24,7 +24,7 @@
 	pom = push origin master
 	cm = checkout master
 	adu = add -u
-	lastmessage = log -1 --pretty=%B 
+	lastmessage = log -1 --pretty=%s 
 [branch]
 	autosetuprebase = always
 [mergetool "vimdiff3"]
