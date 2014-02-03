@@ -8,4 +8,5 @@ if hash apt-get 2> /dev/null; then
 fi
 
 alias inslocal="sudo yum localinstall --nogpgcheck"
-alias pd="pushd ./"
+alias p="popd"
+alias pu="pushd ./"
