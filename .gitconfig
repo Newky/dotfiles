@@ -11,6 +11,7 @@
 	unstage = reset HEAD
 	st = status
 	co = checkout
+    cob = checkout -b
 	br = branch
 	branchrename = branch -m
 	currbranch = rev-parse --abbrev-ref HEAD
